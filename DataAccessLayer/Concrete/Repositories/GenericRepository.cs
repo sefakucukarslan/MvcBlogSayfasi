@@ -31,6 +31,13 @@ namespace DataAccessLayer.Concrete.Repositories
             c.SaveChanges();
         }
 
+        //SingleOrDefault = bir dizi de veya liste de sadece 1 tane değer geriye döndürmek için kullanılan Entitify Framework
+        //LINQ metodu'dur.
+        public T Get(Expression<Func<T, bool>> filter)
+        {
+            return _object.SingleOrDefault(filter);
+        }
+
         public void Insert(T p)
         {
             _object.Add(p);
