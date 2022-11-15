@@ -17,6 +17,9 @@ namespace EntityLayer.Concrete
 
         public DateTime ContentDate { get; set; }
 
+        public bool ContentStatus { get; set; }
+
+
         public int HeadingID { get; set; }//Content tablosuna sütun olarak eklenecek
         public virtual Heading Heading { get; set; }
 

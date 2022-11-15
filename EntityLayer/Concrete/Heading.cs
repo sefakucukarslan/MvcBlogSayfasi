@@ -17,6 +17,9 @@ namespace EntityLayer.Concrete
 
         public DateTime HeadingDate { get; set; }
 
+        public bool HeadingStatus { get; set; }
+
+
 
         public int CategoryID { get; set; } //İlişkili tabloda ki ID alanı. Heading Tablosuna sütun olarak eklenecek
         public virtual Category Category { get; set; }

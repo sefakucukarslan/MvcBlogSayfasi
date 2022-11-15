@@ -33,6 +33,7 @@ namespace EntityLayer.Concrete
         [StringLength(50)]
         public string WriterTitle { get; set; }
 
+        public bool WriterStatus { get; set; }
 
         public ICollection<Heading> Headings { get; set; }//Heading tablosu Writer tablosundan WriterID'yi Referans alıp kullanacak
         public ICollection<Content> Contents { get; set; }//Content tablosu Writer tablosundan WriterID'yi Referans alıp kullanacak
