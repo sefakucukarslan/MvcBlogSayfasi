@@ -15,6 +15,8 @@ namespace MvcProjeKampi.Controllers
     {
         CategoryManager cm = new CategoryManager(new EfCategoryDal());
 
+        //Erişim iznini etkilentirir. Giriş yapmadan erişemezsin.
+        [Authorize(Roles ="B")]
         public ActionResult Index()
         {
             var categoryValues = cm.GetList();
